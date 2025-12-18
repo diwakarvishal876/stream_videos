@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: minio
+  spring:
+    servlet:
+      multipart:
+        max-file-size: 500MB    # Limit for a single file
+        max-request-size: 500MB # Limit for the total HTTP request
+minio:
+  url: http://localhost:7000
+  access-key: minioadmin
+  secret-key: minioadmin123
+  bucket:
+    name: files
+server:
+  port: 8087
+  address: 0.0.0.0
+
