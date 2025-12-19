@@ -1,0 +1,9 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: video-service
+          # Change this to uppercase to match Eureka's registration
+          uri: lb://VIDEO-SERVICE
+          predicates:
+            - Path=/api/v1/videos/**
